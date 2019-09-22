@@ -10,6 +10,7 @@ android {
         targetSdkVersion versions.targetSdk
         versionCode rootProject.gitCommitCount
         versionName versions.versionName
+
     }
 
 
@@ -18,6 +19,9 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':app')
-    implementation project(path: ':core')
 
+    implementation "com.google.android.material:material:${versions.googleMaterial}"
+
+    api "com.jakewharton:butterknife:${versions.butterKnife}"
+    annotationProcessor "com.jakewharton:butterknife-compiler:${versions.butterKnife}"
 }

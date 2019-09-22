@@ -9,8 +9,8 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata:${versions.archLifecycleVersion}"
     implementation "androidx.lifecycle:lifecycle-runtime:${versions.archLifecycleVersion}"
 
-    //=========================NETWORKING===================================
-
-
+    //=========================FIREBASE===================================
+    implementation "com.google.firebase:firebase-database:${versions.firebaseDatabase}"
+    implementation "com.google.firebase:firebase-auth:${versions.firebaseAuth}"
 
 }

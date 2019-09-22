@@ -1,10 +1,11 @@
 apply plugin: 'com.android.dynamic-feature'
 
+apply from: '../core_dependencies.gradle'
+
 android {
     compileSdkVersion versions.compileSdk
 
     defaultConfig {
-        applicationId names.applicationId
         minSdkVersion versions.minSdk
         targetSdkVersion versions.targetSdk
         versionCode rootProject.gitCommitCount
@@ -12,10 +13,17 @@ android {
 
     }
 
-
+    compileOptions {
+        targetCompatibility = "8"
+        sourceCompatibility = "8"
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':app')
+    implementation project(path: ':core')
+
+
+
 }
