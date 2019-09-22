@@ -21,10 +21,11 @@ buildscript {
             'androidxArch'        : '2.0.0',
             'archLifecycleVersion': '2.1.0-alpha04',
             'butterKnife'         : '10.2.0',
-            'dagger'              : '2.17',
             'firebaseAuth'        : '19.0.0',
             'firebaseDatabase'    : '19.1.0',
-            'googleMaterial'     : '1.0.0',
+            'glide'               : '4.9.0',
+            'googleMaterial'      : '1.0.0',
+            'room_version'        : '2.2.0-rc01',
 
 
     ]

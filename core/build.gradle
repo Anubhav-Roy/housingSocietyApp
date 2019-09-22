@@ -20,6 +20,11 @@ android {
         buildConfigField "String", "PREFERENCE_NAME", "\"yocket\""
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -37,6 +42,9 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
-    annotationProcessor "com.google.dagger:dagger-compiler:${versions.dagger}"
+    implementation 'joda-time:joda-time:2.3'
+
+    implementation "androidx.room:room-runtime:${versions.room_version}"
+    annotationProcessor "androidx.room:room-compiler:${versions.room_version}"
 
 }

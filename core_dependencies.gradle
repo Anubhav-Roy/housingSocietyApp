@@ -1,6 +1,5 @@
 dependencies {
 
-    implementation "com.google.dagger:dagger:${versions.dagger}"
 
     // Lifecycle components
     implementation "androidx.lifecycle:lifecycle-extensions:${versions.androidxArch}"

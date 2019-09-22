@@ -2,24 +2,38 @@ package roy.anubhav.home;
 
 import android.app.Application;
 
-import roy.anubhav.core.dagger.CoreComponent;
-import roy.anubhav.core.dagger.DaggerCoreComponent;
+import androidx.room.Room;
+
+import roy.anubhav.core.db.AppDatabase;
+import roy.anubhav.core.db.dao.ActivityLogDao;
 
 public class ApplicationClass extends Application {
 
-    private CoreComponent coreComponent=null;
+    private ActivityLogDao activityLogDao ;
 
     @Override
     public void onCreate() {
         super.onCreate();
+
+        //Initializing the ROOM database on application start.
+        AppDatabase db = Room.databaseBuilder(getApplicationContext(),
+                AppDatabase.class, "yocket").build();
+
+        //Assigning the dao
+        activityLogDao = db.activityLogDao();
+
     }
 
-    public CoreComponent getCoreComponent(){
-
-        if(coreComponent==null)
-            coreComponent = DaggerCoreComponent.create();
-
-        return coreComponent;
+    /**
+     *
+     * Provides the ActivityLogDao throughout the app for performing db transaction .
+     *
+     * @return
+     */
+    public ActivityLogDao getActivityLogDao(){
+        return activityLogDao;
     }
+
+
 
 }

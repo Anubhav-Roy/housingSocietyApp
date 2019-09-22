@@ -6,18 +6,31 @@
     android:layout_height="match_parent"
     tools:context="roy.anubhav.signup.activity.SIgnUpDetails">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_side"
+        android:layout_marginTop="@dimen/margin_top_heading_1"
+        android:text="Almost Done"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/userName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_side"
-        android:layout_marginTop="@dimen/margin_top_heading_1"
         android:layout_marginRight="@dimen/margin_side"
-        app:layout_constraintEnd_toEndOf="parent"
         android:hint="@string/usernameHint"
-        app:layout_constraintStart_toStartOf="parent"
         android:singleLine="true"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_top_between_headers"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColorHint="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/address"
@@ -29,6 +42,7 @@
         android:layout_marginLeft="@dimen/margin_side"
         app:layout_constraintEnd_toEndOf="@+id/userName"
         android:hint="@string/addressHint"
+        android:textColorHint="@color/colorPrimaryDark"
         app:layout_constraintStart_toStartOf="@+id/userName"
         app:layout_constraintTop_toBottomOf="@+id/userName" />
 
@@ -37,8 +51,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/colorPrimaryDark"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

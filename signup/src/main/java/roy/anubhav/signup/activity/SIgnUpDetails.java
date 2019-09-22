@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,22 +26,31 @@ import static roy.anubhav.core.utils.FirebaseHelper.writeToDB;
 
 public class SIgnUpDetails extends AppCompatActivity {
 
-    @BindView(R.id.address)
-    EditText address;
 
-    @BindView(R.id.userName)
+    EditText address;
     EditText userName;
+
+    Button submitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_details);
 
-        ButterKnife.bind(this);
+        address = findViewById(R.id.address);
+        userName = findViewById(R.id.address);
+
+        submitButton = findViewById(R.id.submit);
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                submitDetails();
+            }
+        });
     }
 
-    @OnClick(R.id.submit)
-    void submitDetails(){
+    public void submitDetails(){
+
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         final DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
 

@@ -1,5 +1,10 @@
 package roy.anubhav.core.firebaseModels;
 
+/**
+ *
+ * Firebase database model .
+ *
+ */
 public class User {
     private String username;
     private String address;

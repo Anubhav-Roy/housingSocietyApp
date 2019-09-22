@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="usernameHint">Username</string>
-    <string name="addressHint">Address</string>
+    <string name="usernameHint">Enter your name</string>
+    <string name="addressHint">Enter your Address</string>
 
 </resources>

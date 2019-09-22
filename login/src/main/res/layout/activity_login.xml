@@ -30,15 +30,7 @@
             android:text="@string/phone_title_text"
             android:theme="@style/ThemeOverlay.MyTitleText" />
 
-        <TextView
-            android:id="@+id/status"
-            style="@style/ThemeOverlay.MyTextDetail"
-            android:text="@string/signed_out" />
 
-        <TextView
-            android:id="@+id/detail"
-            style="@style/ThemeOverlay.MyTextDetail"
-            tools:text="Firebase User ID: 123456789abc" />
 
     </LinearLayout>
 
@@ -69,6 +61,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:hint="@string/hint_phone_number"
+                    android:textColorHint="@color/colorPrimaryDark"
                     android:layout_weight="1.0"
                     android:inputType="phone"/>
 
@@ -77,6 +70,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:hint="@string/hint_verification_code"
+                    android:textColorHint="@color/colorPrimaryDark"
                     android:layout_weight="1.0"
                     android:inputType="number"/>
 

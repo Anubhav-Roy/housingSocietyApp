@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="margin_top_heading_1">125dp</dimen>
+    <dimen name="margin_top_heading_1">100dp</dimen>
 
     <dimen name="margin_top_between_headers">50dp</dimen>
 

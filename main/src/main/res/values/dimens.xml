@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_side">20dp</dimen>
+    <dimen name="margin_top_between_input">30dp</dimen>
+
+    <dimen name="heading">24sp</dimen>
+
+    <dimen name="round_corner">20dp</dimen>
+</resources>
