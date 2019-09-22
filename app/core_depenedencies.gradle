@@ -1,0 +1,16 @@
+dependencies {
+
+    implementation "com.google.dagger:dagger:${versions.dagger}"
+
+    // Lifecycle components
+    implementation "androidx.lifecycle:lifecycle-extensions:${versions.androidxArch}"
+
+    //LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata:${versions.archLifecycleVersion}"
+    implementation "androidx.lifecycle:lifecycle-runtime:${versions.archLifecycleVersion}"
+
+    //=========================NETWORKING===================================
+
+
+
+}
